@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Introduction</title>
+<link href="Ysaye.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div id="page1" class="page">
+	<div class="center num1">
+	<p class="header">The Ysaÿe Project</p>
+	</div>
+	<div class="center divider">
+		<div class="bar"></div>
+	</div>
+
+	<div class="center num2">
+	<p class="second-header">Hello and welcome!</p>
+	</div>
+	<div class="center num3">
+	<p class="regular-text">This concert is a passion project representing my journey through music over the past 9 years. When I was 10 years old, I performed Ysaÿe's second sonata, dedicated to Jacques Thibaud in my <span class="italics">All Saint's Day Concert</span>. Many years later when COVID-19 struck, I finally had the chance to take a look at the rest of the 6 sonatas. Since then, I have fallen in love with each one of them; and I'm holding this concert because I believe there is a beautiful story to be shared, not only with each one of the Sonatas, but also as a whole—in concert.<br><br>My goal in holding this concert is to share the music I love dearly with my peers, friends, and family here at Columbia and tell a story so potently beautiful and exciting that it will never be repeated in the same way again. More information will be posted here soon–but until then… please keep the date of the concert free!<br><br>Looking forward to seeing you there.<br>Pierce~</p>
+	<button class="next" onclick="next_page('page1', 'page2')">Next (2/4)</button>
+	</div>
+	</div>
+
+	<div id="page2" class="page">
+	<div class="center num1">
+	<p class="header">Program</p>
+	</div>
+	<div class="center divider">
+		<div class="bar"></div>
+	</div>
+
+	<div class="center num2">
+	<p class="second-header">Composed by Eugene-Auguste Ysaÿe in 1923 (1858-1931)</p>
+	</div>
+	<div class="num3">
+	<div><p class="padding"><span class="piece_title">Sonata No. 1 in G minor</span><span class="dedication">for Joseph Szigeti</span></p>
+		<div class="padding"><ol>
+			<li>Grave</li>
+			<li>Fugato</li>
+			<li>Allegretto poco scherzoso</li>
+			<li>Finale; Con brio</li>
+		</ol>
+		</div>
+	</div>
+		<div><p class="padding"><span class="piece_title">Sonata No. 2 in A minor</span><span class="dedication">for Jacques Thibaud</span></p>
+		<div class="padding"><ol>
+			<li>Obsession; Prelude (with quotes from Bach's Prelude from his Solo Partita in E major</li>
+			<li>Malinconia</li>
+			<li>Danse des Ombres; Sarabande</li>
+			<li>Les Furies</li>
+		</ol>
+		</div>
+	</div>
+		<div><p class="padding"><span class="piece_title">Sonata No. 3 in D minor, "Ballade"</span><span class="dedication">for George Enescu</span></p>
+		<div class="padding"><ol>
+			<li>Lento molto sostenuto</li>
+			<li>Allegro in tempo giusto e con bravura</li>
+		</ol>
+		</div>
+	</div>
+<div style="width: 100%; height: 20px; border-bottom: 1px solid white; text-align: center">
+  <span style="font-size: 20px; color: #dcdcdc; background-color: #0a0a0a; padding: 0 10px;">
+    Intermission <!--Padding is optional-->
+  </span>
+</div>
+<div><p class="padding"><span class="piece_title">Sonata No. 4 in E minor</span><span class="dedication">for Fritz Kreisler</span></p>
+		<div class="padding"><ol>
+			<li>Allemande (Lento maestoso)</li>
+			<li>Sarabande (Quasi lento)</li>
+			<li>Finale (Presto ma non troppo)</li>
+		</ol>
+		</div>
+	</div>
+		<div><p class="padding"><span class="piece_title">Sonata No. 5 in G major</span><span class="dedication">for Mathieu Crickboom</span></p>
+		<div class="padding"><ol>
+			<li>L'Aurore</li>
+			<li>Danse rustique</li>
+		</ol>
+		</div>
+	</div>
+		<div><p class="padding"><span class="piece_title">Sonata No. 6 in E major</span><span class="dedication">for Manuel Quiroga</span></p>
+		<div class="padding"><ol>
+			<li>Allegro giusto non troppo vivo</li>
+		</ol>
+		</div>
+	</div>
+	<div class="center">
+	<button class="next" onclick="next_page('page2', 'page3')">Next (3/4)</button>
+	<button class="prev" onclick="prev_page('page2', 'page1')">Previous (1/4)</button>
+	</div>
+	</div>
+		</div>
+
+	<div id="page3" class="page">
+	<div class="center num1">
+	<p class="header">Biography</p>
+	</div>
+	<div class="center divider">
+		<div class="bar"></div>
+	</div>
+
+	<div class="center num2">
+	<p class="second-header">Eugene Ysaÿe</p>
+	</div>
+	<div class="center num3">
+	<p class="regular-text">Eugene-Auguste Ysaÿe (1858 - 1931) was born in Liège, Belgium, and began his violin lessons with his father at four years old. He trained at the Royal Conservatory of Liège in Belgium, notably studying with Henryk Wieniawski and Henri Vieuxtemps. Post-graduation, Ysaÿe was the principle violinist of the Benjamin Bilse beer-hall orchestra, and began as a concert artist when he was 27. Ysaÿe’s violin performances and tours were well-regarded, especially for his vibrato, rubato, and expressiveness.
+	<br>
+	<br>
+	In his later life, he increasingly suffered from neuritis and diabetes. These health conditions affected his hands, and consequently he turned towards teaching, conducting, and composing. He was a professor at the Brussels Conservatory and the conductor of the Cincinatti Symphony Orchestra from 1918-1922. Besides his six sonatas for solo violin, he also wrote a Sonata for Cello, a Sonata for Two Violins, orchestral pieces with and without various instruments, and an opera, Peter the Miner.
+	<br>
+	<br>
+	Of the six selected sonatas and their dedicatees, two were pupils: Jacques Thibaud (No. 2) and Mathieu Crickboom (No. 5). The remaining dedicatees were friends and fellow-violinists. Ysaÿe also had several works dedicated to himself by Claude Debussy, Camille Saint-Saëns, César Franck, and Ernest Chausson.
+</p>
+	<button class="next" onclick="next_page('page3', 'page4')">Next (4/4)</button>
+	<button class="prev" onclick="prev_page('page3', 'page2')">Previous (2/4)</button>
+	</div>
+	</div>
+
+	<div id="page4" class="page">
+	<div class="center num1">
+	<p class="header">Thanks and Credits</p>
+	</div>
+	<div class="center divider">
+		<div class="bar"></div>
+	</div>
+
+	<div class="center num2">
+	<p class="second-header"></p>
+	</div>
+	<div class="center num3">
+	<p class="regular-text">
+<div class="org-center">
+<p>
+I am incredibly thankful for the opportunity to perform this set of pieces for you all. <i>Thank you for your support and enthusiasm.</i><br />
+</p>
+
+<p>
+<b>My teachers</b>: Hyo Kang and Adele Anthony, without whom I would not have been able to perform this concert today.<br />
+</p>
+
+<p>
+<b>My parents</b>: Dad and Mom--thank you for your love, care, patience, kindness, and support. I am blessed to be your son!<br />
+</p>
+
+<p>
+<b>My brothers</b>: To Austin and Ryan for being the best brothers I could ever imagine. Y'all are great.<br />
+</p>
+
+<p>
+<b>My friends</b>: To friends from far and near--thank you for coming to my concert. You all mean a lot to me, and I really appreciate your taking the time out of your busy schedules to come see me perform! I hope you enjoyed.<br />
+</p>
+
+
+
+<p>
+Thanks also to my incredible/smart/beautiful/awesome friend at Tufts, Audrey Dutcher, for designing this website (html and css) and also researching and writing an introduction to Ysaÿe's work on the previous page. Truly a life-saver!<br />
+</p>
+
+<p>
+These last couple weeks have been pretty stressful for me, and I'm incredibly thankful to Chase, Audrey, Grace-Elleda, and Christian Union for making this concert possible.<br />
+</p>
+</div>
+
+</p>
+	<button class="prev" onclick="prev_page('page4', 'page3')">Previous (3/4)</button>
+	</div>
+	</div>
+
+</body>
+</html>
+
+<script>
+	function next_page(currentPage, nextPage) {
+		let current_page = document.getElementById(currentPage);
+		let next_page = document.getElementById(nextPage);
+		current_page.style.display = "none";
+		next_page.style.display="block";
+	}
+
+	function prev_page(currentPage, prevPage) {
+		let current_page = document.getElementById(currentPage);
+		let prev_page = document.getElementById(prevPage);
+		current_page.style.display = "none";
+		prev_page.style.display="block";
+	}
+</script>
+</div>
+</body>
+</html>

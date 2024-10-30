@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+/* CSS Doc! */
+
+body {
+	background-color: rgba(10, 10, 10);
+}
+
+p, ol li {
+	font-family: Times New Roman, serif;
+	color: rgb(220, 220, 220);
+}
+
+.italics {
+	font-style: italic;
+}
+
+.page {
+	display: none;
+}
+
+#page1 {
+	display: block;
+}
+
+
+.center {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	padding: 0 30px;
+	position: relative;
+}
+
+.center.divider {
+	height: 2px;
+	margin-top: -1.8em;
+}
+.bar {
+	width: 70%;
+	height: 2px;
+	background-color: rgba(127, 90, 183, 0.75);
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.num1 {
+	margin-bottom: -0.0em;
+}
+
+.second-header {
+	font-size: 1.3em;
+}
+
+.num2 {
+	margin-top: 0.25em;
+	margin-bottom: -1.5em;
+}
+.regular-text {
+	font-size: 1em;
+}
+#page2 .titles {
+	padding: 0 30px;
+	background-color: rgba(100, 0, 0, 0.5);
+}
+
+button {
+	position: absolute;
+	font-size: 1em;
+	font-family: Times New Roman, serif;
+	background-color: rgb(220, 220, 220);
+	color: rgb(10, 10, 10);
+	border: none;
+	bottom: -1.9em;
+}
+
+button.next {
+	width: 6em;
+	height: 1.9em;
+	right: 30px;
+}
+
+button.prev {
+	width: 7em;
+	height: 1.9em;
+	left: 30px;
+}
+
+
+.piece_title {
+	font-weight: bold;
+	text-align: left;
+}
+
+.dedication {
+	float: right;
+}
+ol {
+	padding: 0 30px;
+	margin: 0;
+}
+ol li {
+	align-text: left;
+	padding: 0;
+	margin: 0;
+}
+
+.padding {
+	padding: 0 30px;
+}
+
+#page2 button {
+	bottom: -3.4em;
+}

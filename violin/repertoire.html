@@ -1,0 +1,1628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Violin Repertoire</title>
+<meta name="author" content="Pierce Wang" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="stylesheet" href="https://piercegwang.github.io/org-stylesheets/org.min.css">
+
+<script src="https://orgmode.org/org-info.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "showall");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Violin Repertoire</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgd2655bd">Repertoire</a>
+<ul>
+<li><a href="#org6fe8e93">Violin Solo</a></li>
+<li><a href="#orgc36990d">Exercises/Caprices</a></li>
+<li><a href="#org7e91038">Violin and Piano</a></li>
+<li><a href="#org416a5a7">Concertos &amp; Works with Orchestra</a></li>
+<li><a href="#orgcd1f054">Chamber Music</a>
+<ul>
+<li><a href="#orge7a3f34">String Quartet</a></li>
+<li><a href="#org1bf09df">Piano Trio</a></li>
+<li><a href="#orgd4fa08d">Piano Quintet</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Status Key</caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Status</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">Learned and performed</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">Learned but not performed</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">Work in progress</td>
+</tr>
+</tbody>
+</table>
+
+<div id="outline-container-orgd2655bd" class="outline-2">
+<h2 id="orgd2655bd">Repertoire</h2>
+<div class="outline-text-2" id="text-orgd2655bd">
+</div>
+<div id="outline-container-org6fe8e93" class="outline-3">
+<h3 id="org6fe8e93">Violin Solo</h3>
+<div class="outline-text-3" id="text-org6fe8e93">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Partita No. 1 in B Minor, BWV 1002</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Partita No. 2 in D Minor, BWV 1004</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Partita No. 3 in E major, BWV 1006</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 1 in G minor, BWV 1001</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 2 in A minor, BWV 1003</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 3 in C major, BWV 1005</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1720</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Una Limosna Por el Amore de Dios</td>
+<td class="org-left">Barrios, Augustín</td>
+<td class="org-right">1944</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;The Red Violin Caprices</td>
+<td class="org-left">Corigliano, John</td>
+<td class="org-right">1999</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Grand Caprice on Schubert's 'Der Erlkönig, D.328', Op. 26</td>
+<td class="org-left">Ernst, Heinrich Wilhelm</td>
+<td class="org-right">1854</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;The Last Rose of Summer, Polyphonic Study No. 6</td>
+<td class="org-left">Ernst, Heinrich Wilhelm</td>
+<td class="org-right">1864</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Brahms Violin Concerto Cadenza</td>
+<td class="org-left">Heifetz, Jascha</td>
+<td class="org-right">1940</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Recitativo und Scherzo-Caprice, Op.6</td>
+<td class="org-left">Kreisler, Fritz</td>
+<td class="org-right">1911</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Fiddle Dance Suite: 1. Sidestep Reel</td>
+<td class="org-left">Marsalis, Wynton</td>
+<td class="org-right">2018</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Perpetuum Mobile</td>
+<td class="org-left">Novacek, Ottokar</td>
+<td class="org-right">1895</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 1</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 12</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 16</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 24</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 4</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 6</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 8</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Caprice for solo violin, Op. 1 No. 2</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1817</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No. 12 in E minor, Op. 3</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1819</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Visions: III. Lament for Jerusalem</td>
+<td class="org-left">Rutter, John</td>
+<td class="org-right">2016</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;L'arte del arco ("The Art of Bowing")</td>
+<td class="org-left">Tartini, Giuseppe</td>
+<td class="org-right">1798</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Chaconne, in G minor</td>
+<td class="org-left">Vitali, Tomaso Antonio</td>
+<td class="org-right">1745</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Etudes-Caprices Op. 18, No. 4 in A minor</td>
+<td class="org-left">Wieniawski, Henri</td>
+<td class="org-right">1862</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Etudes-Caprices Op. 18, No. 5 in E major</td>
+<td class="org-left">Wieniawski, Henri</td>
+<td class="org-right">1862</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Légende, Op. 17</td>
+<td class="org-left">Wieniawski, Henri</td>
+<td class="org-right">1859</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27 No. 1 'Joseph Szigeti'</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27, No. 2 'Jacques Thibaud'</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27, No. 3 "Ballade"</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27, No. 4 'Fritz Kreisler'</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27, No. 5 'Mathieu Crickboom'</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata for Solo Violin, Op. 27, No. 6 'Manuel Quiroga'</td>
+<td class="org-left">Ysaÿe, Eugène</td>
+<td class="org-right">1923</td>
+<td class="org-left">Violin Solo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgc36990d" class="outline-3">
+<h3 id="orgc36990d">Exercises/Caprices</h3>
+<div class="outline-text-3" id="text-orgc36990d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Das Skalensystem (Scale)</td>
+<td class="org-left">Flesch, Carl</td>
+<td class="org-right">1926</td>
+<td class="org-left">Solo Exercise</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Études ou caprices</td>
+<td class="org-left">Kreutzer, Rodolphe</td>
+<td class="org-right">1805</td>
+<td class="org-left">Solo Exercise</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;24 Caprices for Solo Violin, Op.22</td>
+<td class="org-left">Rode, Pierre</td>
+<td class="org-right">1819</td>
+<td class="org-left">Solo Exercise</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;The Dounis Violin Player's Daily Dozen</td>
+<td class="org-left">Dounis, Demetrius Constantine</td>
+<td class="org-right">1925</td>
+<td class="org-left">Solo Exercise</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;The Dounis Fundamental Trill Studies</td>
+<td class="org-left">Dounis, Demetrius Constantine</td>
+<td class="org-right">1925</td>
+<td class="org-left">Solo Exercise</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org7e91038" class="outline-3">
+<h3 id="org7e91038">Violin and Piano</h3>
+<div class="outline-text-3" id="text-org7e91038">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 2 for Violin and Harpsichord in A Major, BWV 1015</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1723</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Romanian Folk Dances, Sz.56</td>
+<td class="org-left">Bartók, Béla</td>
+<td class="org-right">1915</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Scherzo fantastique, Op.25 "La ronde des Lutins"</td>
+<td class="org-left">Bazzini, Antonio</td>
+<td class="org-right">1853</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Romance, Op. 23</td>
+<td class="org-left">Beach, Amy</td>
+<td class="org-right">1893</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No. 2 in A major, Op. 12, No. 2, Mvt 1</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1798</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No.7, Op.30 No.2 in C minor</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1802</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No.1, Op.78</td>
+<td class="org-left">Brahms, Johannes</td>
+<td class="org-right">1879</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No.2, Op.100</td>
+<td class="org-left">Brahms, Johannes</td>
+<td class="org-right">1886</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sicilienne</td>
+<td class="org-left">Dushkin, Samuel</td>
+<td class="org-right">1924</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Romantic Pieces, Op. 75, Nos. 1 &amp; 2</td>
+<td class="org-left">Dvořák, Antonín</td>
+<td class="org-right">1887</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Salut d'Amour</td>
+<td class="org-left">Elgar, Edvard</td>
+<td class="org-right">1888</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No. 1 in A major, Op. 13</td>
+<td class="org-left">Fauré, Gabriel</td>
+<td class="org-right">1876</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Por Una Cabeza / Tango (arr. John Williams)</td>
+<td class="org-left">Gardel, Carlos</td>
+<td class="org-right">2009</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Melodie ("Dance of the Blessed Spirits"), Orfeo ed Euridice</td>
+<td class="org-left">Gluck, Christoph Willibald</td>
+<td class="org-right">1762</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No.2, Op. 13, Mvt 1 Lento doloroso&#x2013;Allegro vivace</td>
+<td class="org-left">Grieg, Edvard</td>
+<td class="org-right">1867</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata in D Major, HWV 371 Mvts 1 &amp; 2</td>
+<td class="org-left">Handel, George Frideric</td>
+<td class="org-right">1750</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Allegro Brillante, Op. 19</td>
+<td class="org-left">Have, William ten</td>
+<td class="org-right">1885</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Caprice</td>
+<td class="org-left">Kissine, Victor</td>
+<td class="org-right">2011</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sicilienne and Rigoudan</td>
+<td class="org-left">Kreisler, Fritz</td>
+<td class="org-right">1910</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Tambourin Chinois, Op. 3</td>
+<td class="org-left">Kreisler, Fritz</td>
+<td class="org-right">1910</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;4 Morceaux, Op.82</td>
+<td class="org-left">Moszkowski, Moritz</td>
+<td class="org-right">1909</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Serenade No. 7 in D major, K. 250, "Haffner": IV. Rondo (arr. Kreisler)</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1779</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 4 in E minor for Piano and Violin, K.304</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1778</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata No. 6 in G major for Piano and Violin, K.301</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1778</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;The Witches' Dance (arr. F. Kreisler)</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1813</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Variations on 'I palpiti', Op.13</td>
+<td class="org-left">Paganini, Niccolò</td>
+<td class="org-right">1828</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Danse Macabre, Op.40</td>
+<td class="org-left">Saint-Saëns, Camille</td>
+<td class="org-right">1874</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Introduction et Tarantelle, Op. 43</td>
+<td class="org-left">Sarasate, Pablo de</td>
+<td class="org-right">1899</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Spanish Dances, Op.23 "Zapateado"</td>
+<td class="org-left">Sarasate, Pablo de</td>
+<td class="org-right">1880</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No. 1 in D major, D.384</td>
+<td class="org-left">Schubert, Franz</td>
+<td class="org-right">1816</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Suite Italienne (I-IV)</td>
+<td class="org-left">Stravinsky, Igor</td>
+<td class="org-right">1920</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata in G minor, B.g5 (Devil's Trill Sonata/'Le trille du diable')</td>
+<td class="org-left">Tartini, Giuseppe</td>
+<td class="org-right">1799</td>
+<td class="org-left">Violin and Piano</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org416a5a7" class="outline-3">
+<h3 id="org416a5a7">Concertos &amp; Works with Orchestra</h3>
+<div class="outline-text-3" id="text-org416a5a7">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 1 in A minor</td>
+<td class="org-left">Accolay, Jean-Baptiste</td>
+<td class="org-right">1868</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Concerto for Violin &amp; Orchestra (2005), Mvt 2</td>
+<td class="org-left">Actor, Lee</td>
+<td class="org-right">2005</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Concerto for Violin &amp; Orchestra (2005), Mvts 1 &amp; 3</td>
+<td class="org-left">Actor, Lee</td>
+<td class="org-right">2005</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 2 in E major, BWV 1042, Mvts 2 &amp; 3</td>
+<td class="org-left">Bach, Johann Sebastian</td>
+<td class="org-right">1718</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto, Op. 14</td>
+<td class="org-left">Barber, Samuel</td>
+<td class="org-right">1939</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Bartok Violin Concerto No. 2</td>
+<td class="org-left">Bartók, Béla</td>
+<td class="org-right">1938</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto, Op.77</td>
+<td class="org-left">Brahms, Johannes</td>
+<td class="org-right">1878</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 1 in G minor, Op. 26</td>
+<td class="org-left">Bruch, Max</td>
+<td class="org-right">1866</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto, Op. 53</td>
+<td class="org-left">Dvořák, Antonin</td>
+<td class="org-right">1879</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Ballade for Violin and Orchestra, Op. 4, in A major</td>
+<td class="org-left">Enescu, George</td>
+<td class="org-right">1895</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Butterfly Lovers' Violin Concerto (梁祝小提琴协奏曲)</td>
+<td class="org-left">Gang, Chen (陈钢) and Zhanhao, He (何占豪) &vert;</td>
+<td class="org-right">1959</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto, Op. 82</td>
+<td class="org-left">Glazunov, Aleksandr</td>
+<td class="org-right">1904</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto in C Major, Op. 48</td>
+<td class="org-left">Kabalevsky, Dmitry</td>
+<td class="org-right">1948</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto in E Minor</td>
+<td class="org-left">Konyus (Conus), Yuly</td>
+<td class="org-right">1896</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto, Op. 64</td>
+<td class="org-left">Mendelssohn, Felix</td>
+<td class="org-right">1844</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 3 in G major, K.216</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1775</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 4 in D major, K.218</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1775</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 5 in A major, K. 219</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1775</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 1 in D Major, Op. 19</td>
+<td class="org-left">Prokofiev, Sergei</td>
+<td class="org-right">1917</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;The Carmen Fantasy, Op. 25</td>
+<td class="org-left">Sarasate, Pablo de</td>
+<td class="org-right">1882</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Zigeunerweisen</td>
+<td class="org-left">Sarasate, Pablo de</td>
+<td class="org-right">1878</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 1</td>
+<td class="org-left">Shostakovich, Dmitri</td>
+<td class="org-right">1803</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto in D minor, Op. 47</td>
+<td class="org-left">Sibelius, Jean</td>
+<td class="org-right">1904</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Meditation, from Souvenir d'un lieu cher (“Memory of a Dear Place”), Op. 42, No. 1</td>
+<td class="org-left">Tchaikovsky, Pyotr Ilyich</td>
+<td class="org-right">1878</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto in D major, Op. 35</td>
+<td class="org-left">Tchaikovsky, Pyotr Ilyich</td>
+<td class="org-right">1878</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Concerto No.1 in E major, Op.8, RV 269, "La primavera" (Spring)</td>
+<td class="org-left">Vivaldi, Antonio</td>
+<td class="org-right">1723</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto in F minor, RV 297 'L'inverno' ("Winter")</td>
+<td class="org-left">Vivaldi, Antonio</td>
+<td class="org-right">1723</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;"Carmen" Fantasy for Violin and Orchestra</td>
+<td class="org-left">Waxman, Franz</td>
+<td class="org-right">1946</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 1, Op. 14</td>
+<td class="org-left">Wieniawski, Henri</td>
+<td class="org-right">1852</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Concerto No. 2, Op. 22</td>
+<td class="org-left">Wieniawski, Henri</td>
+<td class="org-right">1862</td>
+<td class="org-left">Concertos &amp; Works with Orchestra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgcd1f054" class="outline-3">
+<h3 id="orgcd1f054">Chamber Music</h3>
+<div class="outline-text-3" id="text-orgcd1f054">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">-</td>
+<td class="org-left">&ensp;&ensp;The Violin Sonata No. 9, Op. 47 in A major "Kreutzer Sonata"</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1805</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Prelude a l'apres-midi d'un faune, L. 86</td>
+<td class="org-left">Debussy, Claude</td>
+<td class="org-right">1894</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Quintet in A major, Op. 81</td>
+<td class="org-left">Dvořák, Antonin</td>
+<td class="org-right">1887</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Sonata in A minor for Piano and Violin (Mvts 1&amp;2)</td>
+<td class="org-left">Franck, César</td>
+<td class="org-right">1886</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Sonata in A minor for Piano and Violin (Mvts 3&amp;4)</td>
+<td class="org-left">Franck, César</td>
+<td class="org-right">1886</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Symphony No. 4 in G Mvmt. IV arr. Schoenberg</td>
+<td class="org-left">Mahler, Gustav</td>
+<td class="org-right">1900</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Rondo, K.373</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1781</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Sonata in B-flat Major, K. 375</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1781</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Violin Sonata No. 2</td>
+<td class="org-left">Ravel, Maurice</td>
+<td class="org-right">1927</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;Kaiser (Emperor), Op. 437 arr. Schoenberg</td>
+<td class="org-left">Strauss, Johann</td>
+<td class="org-right">1889</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;6 Pieces for Orchestra</td>
+<td class="org-left">Webern, Anton</td>
+<td class="org-right">1928</td>
+<td class="org-left">Chamber Music</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-orge7a3f34" class="outline-4">
+<h4 id="orge7a3f34">String Quartet</h4>
+<div class="outline-text-4" id="text-orge7a3f34">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;String Quartet No. 14 in C# minor, Op. 131</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1826</td>
+<td class="org-left">String Quartet</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;String Quartet No. 4 "United Quartet"</td>
+<td class="org-left">Cowell, Henry</td>
+<td class="org-right">1936</td>
+<td class="org-left">String Quartet</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;String Quartet No. 103, Op. 76 "Emperor Quartet"</td>
+<td class="org-left">Handel, George Frideric</td>
+<td class="org-right">1797</td>
+<td class="org-left">String Quartet</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;String Quartet No. 20 in D, K.499 "Hoffmeister": IV. Allegro</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1786</td>
+<td class="org-left">String Quartet</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;String Quartet No.23 in F major, K.590</td>
+<td class="org-left">Mozart, Wolfgang Amadeus</td>
+<td class="org-right">1790</td>
+<td class="org-left">String Quartet</td>
+</tr>
+
+<tr>
+<td class="org-left">☐</td>
+<td class="org-left">&ensp;&ensp;String Quartet No. 13, D 804 "Rosamunde"</td>
+<td class="org-left">Schubert, Franz</td>
+<td class="org-right">1824</td>
+<td class="org-left">String Quartet</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org1bf09df" class="outline-4">
+<h4 id="org1bf09df">Piano Trio</h4>
+<div class="outline-text-4" id="text-org1bf09df">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio No. 1 in D minor, Op. 32</td>
+<td class="org-left">Arensky, Anton</td>
+<td class="org-right">1894</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio in C Minor, Op. 1, No. 3</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1795</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio in E-flat Major, Op. 1, No. 1</td>
+<td class="org-left">Beethoven, Ludwig van</td>
+<td class="org-right">1795</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio No. 2 in C Major, Op. 87</td>
+<td class="org-left">Brahms, Johannes</td>
+<td class="org-right">1882</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio No. 4 in E minor, Op. 90, B. 166 "Dumky"</td>
+<td class="org-left">Dvořák, Antonin</td>
+<td class="org-right">1891</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio No. 1 in D Minor, Op. 49</td>
+<td class="org-left">Mendelssohn, Felix</td>
+<td class="org-right">1839</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Primavera porteña (Spring) Arr. Piano Trio</td>
+<td class="org-left">Piazzolla, Astor</td>
+<td class="org-right">1970</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Trio No. 2 in E minor, Op. 67</td>
+<td class="org-left">Shostakovich, Dmitri</td>
+<td class="org-right">1944</td>
+<td class="org-left">Piano Trio</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgd4fa08d" class="outline-4">
+<h4 id="orgd4fa08d">Piano Quintet</h4>
+<div class="outline-text-4" id="text-orgd4fa08d">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">TODO</th>
+<th scope="col" class="org-left">ITEM</th>
+<th scope="col" class="org-left">COMPOSER</th>
+<th scope="col" class="org-right">COMPOSED</th>
+<th scope="col" class="org-left">ARRANGEMENT</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Quintet, Op. 34 (Mvmt. I)</td>
+<td class="org-left">Brahms, Johannes</td>
+<td class="org-right">1865</td>
+<td class="org-left">Piano Quintet</td>
+</tr>
+
+<tr>
+<td class="org-left">✓</td>
+<td class="org-left">&ensp;&ensp;Piano Quintet in G minor, Op. 57 (Mvmt. I)</td>
+<td class="org-left">Shostakovich, Dmitri</td>
+<td class="org-right">1940</td>
+<td class="org-left">Piano Quintet</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2024-08-22 Thu 00:00</p>
+<p class="author">Author: Pierce Wang</p>
+</div>
+</body>
+</html>

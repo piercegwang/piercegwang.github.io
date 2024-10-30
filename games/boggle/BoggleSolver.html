@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://piercegwang.github.io/org-stylesheets/org.min.css">
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 90px 90px 90px 90px;
+  background-color: #2196F3;
+  padding: 10px;
+  justify-content: center;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+.controls {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px;
+    grid-gap: 10px;
+    background-color: #e0c3ba;
+    padding: 10px;
+}
+.justified {
+  display: flex;
+  justify-content: center;
+  vertical-align: top;
+}
+.align-right {
+    text-align: right;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.align-left {
+    text-align: left;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+</style>
+</head>
+<body>
+
+  <div class="justified">
+    <h1>Boggle Solver</h1>
+  </div>
+  <p style="text-align: center;">Welcome to the boggle solver. Please enter the board into the text box below and then click "Solve" to display solutions below.</p>
+
+<!-- <p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p> -->
+
+<!-- <p>Direct child element(s) of the grid container automatically becomes grid items.</p> -->
+
+  <div class="justified">
+    <textarea id="board_input" spellcheck="false" autocorrect="off" autocapitalize="off" style="text-align: center;" rows="5" cols="60" name="text" placeholder="Enter Board Here"></textarea>
+  </div>
+  <div class="justified">
+    <input id="solve" type="submit" value="Solve" onclick="game = Game.run(new Game(document.getElementById('board_input').value));" />
+  </div>
+<br/>
+<div class="controls">
+  <div class="align-left">
+    <button style="text-align:left;vertical-align:middle;" type="button" onclick="game.prevWord()">Previous word</button>
+  </div>
+  <div class="justified">
+    <p id="word_display"></p>
+  </div>
+  <div class="align-right">
+    <button style="text-align:right;vertical-align:middle;" type="button" onclick="game.nextWord();">Next word</button>
+  </div>
+</div>
+
+  <!-- <div style="float:left;"> -->
+  <!--   <button style="float:left;" type="button">Button</button> -->
+  <!-- </div> -->
+
+<div class="grid-container">
+  <div class="grid-item"><p id="00"><br></div>
+  <div class="grid-item"><p id="01"><br></div>
+  <div class="grid-item"><p id="02"><br></div>
+  <div class="grid-item"><p id="03"><br></div>
+  <div class="grid-item"><p id="10"><br></div>
+  <div class="grid-item"><p id="11"><br></div>
+  <div class="grid-item"><p id="12"><br></div>
+  <div class="grid-item"><p id="13"><br></div>
+  <div class="grid-item"><p id="20"><br></div>
+  <div class="grid-item"><p id="21"><br></div>
+  <div class="grid-item"><p id="22"><br></div>
+  <div class="grid-item"><p id="23"><br></div>
+  <div class="grid-item"><p id="30"><br></div>
+  <div class="grid-item"><p id="31"><br></div>
+  <div class="grid-item"><p id="32"><br></div>
+  <div class="grid-item"><p id="33"><br></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+  function custom_find(list, item) {
+      for (var i = 0; i < list.length; i++) {
+          if (list[i].equals(item)) {
+              return i;
+          }
+      }
+      return -1;
+  }
+  class Word {
+      constructor() {
+          this.word = "";
+          this.coordinates = [];
+          this.length = 0;
+      }
+
+      add_letter(letter, coord) {
+          this.word = this.word.concat(letter);
+          this.coordinates.push(coord);
+          this.length++;
+      }
+
+      pop_letter() {
+          this.word = this.word.substring(0, this.word.length-1);
+          this.coordinates.pop();
+          this.length--;
+      }
+
+      get_word() {
+          return this.word;
+      }
+
+      get_coordinates() {
+          return this.coordinates;
+      }
+
+      equals(o) {
+          return this.word == o.word;
+      }
+
+      get_copy() {
+          var new_word = new Word();
+          new_word.word = this.word.slice();
+          new_word.coordinates = JSON.parse(JSON.stringify(this.coordinates));
+          new_word.length = this.length;
+          return new_word;
+      }
+
+  }
+
+
+  class Dictionary {
+      constructor() {
+          var url = 'https://piercegwang.github.io/games/boggle/dict.json';
+          var j = [];
+          $.ajax({
+            type: 'GET',
+            url: url,
+            dataType: 'json',
+              success: function(data) { j = data; console.log(data)},
+            async: false
+          });
+          this.dictionary = j;
+      }
+
+      checkWordHelper(word, dictionary) {
+          if (word.length == 0) {
+              if ("." in dictionary) {
+                  return 2
+              } else if (Object.keys(dictionary).length > 0) {
+                  return 1
+              } else {
+                  return 0
+              }
+          } else {
+              if (!(word.substring(0, 1) in dictionary)) {
+                  return 0
+              } else {
+                  return this.checkWordHelper(word.substring(1), dictionary[word.substring(0, 1)])
+              }
+          }
+      }
+
+      checkWord(word) {
+          return this.checkWordHelper(word, this.dictionary)
+      }
+  }
+
+  class Game {
+      constructor(board) {
+          this.board = [];
+          var lines = board.split("\n");
+          for (var i = 0; i < lines.length; i++) {
+              this.board.push(lines[i].split(''));
+          }
+          this.dictionary = new Dictionary();
+          this.foundWords = [];
+          this.currentWord = 0;
+          console.log(this.board);
+      }
+
+      findAllWords() {
+          var visited = JSON.parse(JSON.stringify(this.board));
+          for (var r = 0; r < visited.length; r++) {
+              for (var c = 0; c < visited[r].length; c++) {
+                  visited[r][c] = false;
+              }
+          }
+          for (var r = 0; r < this.board.length; r++) {
+              for (var c = 0; c < this.board[r].length; c++) {
+                  this.dfs(r, c, visited, new Word());
+              }
+          }
+          this.foundWords.sort(function(a, b){return b.length - a.length});
+          console.log(JSON.stringify(this.foundWords, null, '\t'));
+      }
+
+      is_valid_space(row, col, visited) {
+          return ((row < this.board.length) &&
+                  (row >= 0) &&
+                  (col < this.board[row].length) &&
+                  (col >= 0) &&
+                  (this.board[row][col] != " ") &&
+                  (!visited[row][col]));
+      }
+      
+      dfs(row, col, visited, match) {
+          visited[row][col] = true;
+          match.add_letter(this.board[row][col], [row, col]);
+          // console.log(`Current word: ${match.get_word()}`);
+          var res = this.dictionary.checkWord(match.get_word());
+          if (res == 2 && custom_find(this.foundWords, match) < 0) {
+              this.foundWords.push(match.get_copy());
+          }
+          if (res > 0) {
+              if (this.is_valid_space(row, col+1, visited)) {
+                  this.dfs(row, col+1, visited, match);
+              }
+              if (this.is_valid_space(row+1, col+1, visited)) {
+                  this.dfs(row+1, col+1, visited, match);
+              }
+              if (this.is_valid_space(row+1, col, visited)) {
+                  this.dfs(row+1, col, visited, match);
+              }
+              if (this.is_valid_space(row+1, col-1, visited)) {
+                  this.dfs(row+1, col-1, visited, match);
+              }
+              if (this.is_valid_space(row, col-1, visited)) {
+                  this.dfs(row, col-1, visited, match);
+              }
+              if (this.is_valid_space(row-1, col-1, visited)) {
+                  this.dfs(row-1, col-1, visited, match);
+              }
+              if (this.is_valid_space(row-1, col, visited)) {
+                  this.dfs(row-1, col, visited, match);
+              }
+              if (this.is_valid_space(row-1, col+1, visited)) {
+                  this.dfs(row-1, col+1, visited, match);
+              }
+          }
+          visited[row][col] = false;
+          match.pop_letter();
+      }
+
+      displayWord() {
+          var n = this.currentWord;
+          var coords = this.foundWords[n].get_coordinates();
+          document.getElementById("word_display").innerHTML = this.foundWords[n].get_word();
+          for (var i = 0; i < coords.length; i++) {
+              console.log(coords[i][0].toString().concat(coords[i][1].toString()));
+              document.getElementById(coords[i][0].toString().concat(coords[i][1].toString())).innerHTML = (i+1).toString();
+          }
+      }
+
+      clearDisplay() {
+          for (var r = 0; r < this.board.length; r++) {
+              for (var c = 0; c < this.board[r].length; c++) {
+                  console.log(r.toString().concat(c.toString()));
+                  document.getElementById(r.toString().concat(c.toString())).innerHTML = "";
+              }
+          }
+      }
+
+      nextWord() {
+          if (this.currentWord < this.foundWords.length - 1) {
+              this.currentWord++;
+              this.clearDisplay();
+              this.displayWord();
+          }
+      }
+
+      prevWord() {
+          if (this.currentWord > 0) {
+              this.currentWord--;
+              this.clearDisplay();
+              this.displayWord();
+          }
+      }
+
+      static run(game) {
+          game.findAllWords();
+          // for (var i = 0; i < 10; i++) {
+          //     console.log(game.foundWords[i].get_word());
+          // }
+          game.currentWord = 0;
+          game.clearDisplay();
+          game.displayWord();
+          return game;
+      }
+  }
+
+  var game;
+
+
+</script>
+
+<p style="text-align: center;"><small>for kaeon</small></p>
+</body>
+</html>
+
+
