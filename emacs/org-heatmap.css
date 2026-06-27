@@ -1,0 +1,10 @@
+table.heatmap-0-10 td,
+table.heatmap-0-10 th {
+  transition: filter 120ms ease, outline-color 120ms ease;
+}
+
+table.heatmap-0-10 .hm-hover {
+  filter: brightness(1.15);
+  outline: 2px solid rgba(0, 0, 0, 0.35);
+  outline-offset: -2px;
+}
