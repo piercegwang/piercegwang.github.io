@@ -2,7 +2,7 @@
   function colorFor0to10(v) {
     // 0=red, 10=green
     const hue = (v / 10) * 120;
-    return `hsl(${hue}, 50%, 80%)`;
+    return `hsl(${hue}, 75%, 55%)`;
   }
 
   function applyHeatmap() {
